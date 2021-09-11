@@ -11,11 +11,11 @@ public class DoubleClickObject : MonoBehaviour, IPointerClickHandler
     public MouseButtonType MouseButtonType = MouseButtonType.Left;
 
     [Serializable]
-    private class Event : UnityEvent { };
+    public class Event : UnityEvent { };
     [SerializeField]
-    private Event SingleClickEvents = new Event();
+    public Event SingleClickEvents = new Event();
     [SerializeField]
-    private Event DoubleClickEvents = new Event();
+    public Event DoubleClickEvents = new Event();
 
     public void OnPointerClick(PointerEventData eventData)
     {
